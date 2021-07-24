@@ -17,5 +17,8 @@
     <hr>
     <p>{{blog.body}}</p>
 
+    <a href="{% url 'edit' blog.id %}">edit</a>
+    <a href="{% url 'delete' blog.id %}">delete</a>
+
 </body>
 </html>
