@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %} 
-<div>
+
+    {% if user.is_authenticated %}
+        {{user.username}}
+    {% endif %}
+        
+    <div>
         <a href="{% url 'new' %}">new post</a>
     </div>
     
