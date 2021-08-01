@@ -8,6 +8,9 @@
         날짜: {{blog.pub_date}}
     </div>
     <hr>
+    {% if blog.image %}
+        <p><img src="{{blog.image.url}}" alt=""></p>
+    {% endif %}
     <p>{{blog.body}}</p>
 
     <a href="{% url 'edit' blog.id %}">edit</a>

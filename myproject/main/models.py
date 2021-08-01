@@ -6,6 +6,7 @@ class Blog(models.Model) : #import해온 models를 가져옴
     writer = models.CharField(max_length=100)
     pub_date = models.DateTimeField() #작성한 시간을 나타내는
     body = models.TextField() #게시물의 내용
+    image = models.ImageField(upload_to = "main/", blank=True, null=True)
 
     def __str__(self): 
         return self.title
